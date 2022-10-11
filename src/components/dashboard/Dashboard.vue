@@ -1,5 +1,6 @@
 <template>
     <div id="list-table">
+        <Message :msg="msg" v-show="msg"/>
         <div>
             <div id="list-table-hedading">
                 <div class="order-id">#</div>
@@ -18,7 +19,7 @@
                <div> {{ user.turma }} </div>
                <div> {{user.status}} </div>
                <div class="btn">
-                   <button class="edit-btn">Editar</button>
+                   <button class="edit-btn" @click="updateUser(user.id)">Editar</button>
                    <button class="save-btn">Salvar</button>
                    <button class="delete-btn" @click="deleteUser(user.id)">Deletar</button>
                </div>
@@ -29,6 +30,7 @@
 </template>
 
 <script lang="js">
+require("../message/Message.vue");
 import DashboardComponent from './DashboardComponent';
 export default DashboardComponent;
 </script>

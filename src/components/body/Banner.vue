@@ -1,6 +1,6 @@
 <template>
     <div id="main-banner">
-        <h1>Crie sua conta:</h1>
+        <h1>Venha ser tech</h1>
     </div>
 </template>
 <script lang="js">

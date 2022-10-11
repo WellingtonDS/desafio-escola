@@ -3,8 +3,8 @@
         <router-link to="/" id="logo-url">
           <img :src="logo" :alt="alt" id="logo">
         </router-link>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/list">list</router-link>
+        <router-link to="/">Início</router-link> 
+        <router-link to="/lista">Dashboard</router-link>
       </nav>
 </template>
 <script lang="js">

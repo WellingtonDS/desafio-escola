@@ -5,7 +5,7 @@
         <form id="form-data" @submit="createUser">
             <div class="input-container">
                 <label for="name">Nome Completo</label>
-                <input type="text" id="name" name="name" v-model="name" aria-placeholder="Digite seu nome">
+                <input type="text" id="name" name="name" v-model="name" aria-placeholder="Digite seu nome" :maxlength="maxLength">
             </div>
             <div class="input-container">
                 <label for="turma">Escolha uma turma</label>
@@ -19,7 +19,7 @@
             </div>
             <div class="input-container">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" v-model="email" aria-placeholder="Digite seu e-mail">
+                <input type="email" id="email" name="email" v-model="email" aria-placeholder="Digite seu e-mail" :maxlength="maxLength">
             </div>
             <div class="input-container">
                 <label for="file">Envie uma foto</label>

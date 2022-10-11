@@ -8,6 +8,7 @@ export default {
 
     data() {
         return {
+            maxLength: 100,
             classes: null,
             name: null,
             turma: null,
@@ -24,7 +25,7 @@ export default {
 
             const req = await fetch("http://localhost:3000/data");  //requisição para o fake api que contém dados de um json
             const data = await req.json(); // espera a requisição e espera transformar em json para obter dados
-    
+            
             this.turmas = data.turmas;
             return hour;
         },

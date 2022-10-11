@@ -1,6 +1,6 @@
 <template>
     <footer id="footer">
-        <p>&copy; 2021</p>
+        <p> &copy; Todos os direitos reservados {{ new Date().getFullYear() }} </p>
     </footer>
 </template>
 <script lang="js">
