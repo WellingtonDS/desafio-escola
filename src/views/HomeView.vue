@@ -2,7 +2,6 @@
   <Banner/>
   <div class="main-container">
     <h1>Cadastre-se agora mesmo!</h1>
-    <p>formulario</p>
     <Form/>
   </div>
 </template>
