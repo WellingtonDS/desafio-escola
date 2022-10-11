@@ -1,0 +1,52 @@
+@import '@/styles/variables.scss';
+@import '@/styles/colors.scss';
+
+
+#form-data {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 2px solid $persianGreen;
+    padding: 1em;
+    border-radius: 20px;
+    background-color: $gin;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: $keppel;
+    padding: 5px 10px;
+    border-left:  4px solid $oceanBlue;
+}
+
+input, select {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 2px solid $persianGreen;
+    color: $persianGreen;
+}
+
+.submit-btn {
+    background-color: $persianGreen;
+    color: $white;
+    font-weight: bold;
+    border: 2px solid $persianGreen;
+    padding: 10px;
+    font-size: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.submit-btn:hover {
+    background-color: $white;
+    color: $persianGreen;
+    transition: .5s;
+}
+

@@ -1,0 +1,15 @@
+@import '@/styles/variables.scss';
+@import '@/styles/colors.scss';
+
+
+#footer {
+    height: 200px;
+    background-color: $nandor ;
+    border-top: 4px solid $blueStone;
+    color: $greyScale;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+}
