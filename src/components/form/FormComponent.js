@@ -34,7 +34,7 @@ export default {
             
             const data = {
                 name: this.name,
-                emai: this.email,
+                email: this.email,
                 photo: this.photo,
                 turma: this.turma,
                 status: this.status

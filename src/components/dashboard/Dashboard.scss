@@ -1,0 +1,96 @@
+@import '@/styles/variables.scss';
+@import '@/styles/colors.scss';
+
+
+#list-table {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+#list-table-hedading,
+#list-table-rows, 
+.list-table-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#list-table-hedading {
+    font-weight: bold;
+    padding: 12px;
+    border-bottom: 3px solid $blackGray;
+}
+
+#list-table-hedading div,
+.list-table-row div {
+    width: 19%; 
+}
+
+.list-table-row {
+    width: 100%;
+    padding: 12px;
+    border-bottom: 1px solid $grey30;
+}
+
+#list-table-hedading .order-id,
+.list-table-row .order-number {
+    width: 5%;
+}
+
+.edit-btn {
+    background-color: $goldPressed;
+    color: $white;
+    font-weight: bold;
+    border: 2px solid $goldPressed;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.edit-btn:hover {
+    background-color: transparent;
+    color: $goldPressed;
+}
+
+.save-btn {
+    background-color: $persianGreen;
+    color: $white;
+    font-weight: bold;
+    border: 2px solid $persianGreen;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .5s;
+    margin: 10px;
+}
+
+.save-btn:hover {
+    background-color: transparent;
+    color: $persianGreen;
+}
+.delete-btn {
+    background-color: $red;
+    color: $white;
+    font-weight: bold;
+    border: 2px solid $red;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.delete-btn:hover {
+    background-color: transparent;
+    color: $red;
+}
+
+
+.btn {
+    justify-content: space-between;
+}
