@@ -1,6 +1,6 @@
 <template>
 <div>
-    <p>Component de mensagem</p>
+    <Message :msg="msg" v-show="msg"/>
     <div>
         <form id="form-data" @submit="createUser">
             <div class="input-container">
@@ -34,8 +34,9 @@
 
 </template>
 
-
 <script lang="js">
+
+require("../message/Message.vue");
 
 import FormComponent from './FormComponent';
 export default FormComponent 

@@ -1,5 +1,11 @@
+import Message from '../message/MessageComponent';
+
 export default {
     name: "form",
+    components: {
+        Message
+    },
+
     data() {
         return {
             classes: null,
@@ -8,7 +14,7 @@ export default {
             photo: null,
             status: "Ativo",
             email: '',
-            msg: [],
+            msg: "",
         }
     },
     methods: {
@@ -44,8 +50,12 @@ export default {
 
             const res = await req.json();
 
-            //limpar campos apos submit do formulario
+            this.msg = `${res.name}, cadastro realizado com sucesso!`;
 
+
+            setTimeout(() => this.msg = "", 3000);
+
+            //limpar campos
             this.name = "";
             this.email = "";
             this.photo = "";
@@ -54,7 +64,7 @@ export default {
         }
     },
     mounted() {
-        setTimeout(()=>{
+        setTimeout(() => {
             this.getData() //atraso no carregamento de requisicao do json em 500ms
          }, 500);
     },
