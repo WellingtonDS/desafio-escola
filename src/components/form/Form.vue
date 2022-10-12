@@ -1,6 +1,7 @@
 <template>
 <div>
     <Message :msg="msg" v-show="msg"/>
+    
     <div>
         <form id="form-data" @submit.prevent="createUser">
             <div class="input-container">
@@ -11,7 +12,7 @@
             <div class="input-container">
                 <label for="turma">Escolha uma turma</label>
                 <select name="turma" id="turma" v-model="turma" :class="{error: v$.turma.$error}">
-                    <option value="">Selecione sua turma</option>
+                    <option value="">Selecione uma turma</option>
                     <option v-for="turma in turmas" :key="turma.id" :value="turma"
                     >
                         {{ turma.id }} &ensp; {{ turma.label }} &ensp; {{ turma.serieId }} &ensp; {{ turma.serieName }}

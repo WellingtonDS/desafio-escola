@@ -12,6 +12,7 @@
 .list-table-row {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 #list-table-hedading {
@@ -36,42 +37,25 @@
     width: 5%;
 }
 
-.edit-btn {
-    background-color: $goldPressed;
-    color: $white;
-    font-weight: bold;
-    border: 2px solid $goldPressed;
-    border-radius: 15px;
-    padding: 10px;
-    font-size: 16px;
-    margin: 0 auto;
-    cursor: pointer;
-    transition: .5s;
-}
 
-.edit-btn:hover {
-    background-color: transparent;
-    color: $goldPressed;
-}
-
-.save-btn {
+.clean-btn {
     background-color: $persianGreen;
     color: $white;
     font-weight: bold;
     border: 2px solid $persianGreen;
     border-radius: 15px;
-    padding: 10px;
+    padding: 5px 10px;
     font-size: 16px;
     margin: 0 auto;
     cursor: pointer;
     transition: .5s;
-    margin: 10px;
 }
-
-.save-btn:hover {
+    
+.clean-btn:hover {
     background-color: transparent;
     color: $persianGreen;
 }
+    
 
 .delete-btn {
     background-color: $red;
@@ -84,6 +68,7 @@
     margin: 0 auto;
     cursor: pointer;
     transition: .5s;
+    margin: 10px;
 }
 
 .delete-btn:hover {
@@ -96,7 +81,9 @@
     justify-content: space-between;
 }
 
-
+.status {
+    width: 90px;
+}
 
 
 #form-groups {

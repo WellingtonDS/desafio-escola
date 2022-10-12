@@ -58,12 +58,12 @@ export default {
                     email: this.email,
                     photo: this.photo,
                     turma: this.turma,
-                    status: this.status
+                    status: "Ativo"
                 }
+
+                const dataJson = JSON.stringify(data); 
     
-                const dataJson = JSON.stringify(data); //transformando texto em formato json
-    
-                const req = await fetch("Http://localhost:3000/users", {            // metodo para enviar dados via post para arquivo json.
+                const req = await fetch("Http://localhost:3000/users", {
                     method: "POST", 
                     headers: {"Content-Type": "application/json"},
                     body: dataJson

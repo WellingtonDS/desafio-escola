@@ -60002,17 +60002,44 @@
         "serieId": 2,
         "serieName": "2º ano"
       }
-    ],
-    "status": [
-      {
-        "id": 1,
-        "tipo": "Ativo"
-      },
-      {
-        "id": 2,
-        "tipo": "Inativo"
-      }
     ]
   },
-  "users": []
+  "users": [
+    {
+      "name": "Introdução ao PHP",
+      "email": "w_santos1993@outlook.com",
+      "photo": null,
+      "turma": {
+        "label": "Turma 1 B",
+        "id": 1,
+        "serieId": 2,
+        "serieName": "2º ano"
+      },
+      "status": "Ativo",
+      "id": 1
+    },
+    {
+      "name": "Wellington Dos Santos",
+      "email": "w_santos1993@outlook.com",
+      "photo": null,
+      "turma": {
+        "label": "Turma 1 B",
+        "id": 1,
+        "serieId": 2,
+        "serieName": "2º ano"
+      },
+      "status": "Ativo",
+      "id": 3
+    }
+  ],
+  "status": [
+    {
+      "id": 1,
+      "tipo": "Ativo"
+    },
+    {
+      "id": 2,
+      "tipo": "Inativo"
+    }
+  ]
 }

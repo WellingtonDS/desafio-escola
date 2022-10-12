@@ -11,7 +11,7 @@ export default {
             users: null,
             user_id: null,
             status: [],
-            msg: null,
+            msg: "",
             selected: null,
             search: ''
         }
@@ -38,14 +38,16 @@ export default {
     
             this.users = data;
 
-            // this.getStatus();
-            //resgatar o status
+            this.getStatus();
         },
 
-        // async getStatus() {
-        //     const req = await fetch("http://localhost:3000/status");  //requisição para o fake api que contém dados de um json
-        //     const data = await req.json();
-        // },
+        async getStatus() {
+            const req = await fetch("http://localhost:3000/status");  //requisição para o fake api que contém dados de um json
+            const data = await req.json();
+
+            this.status = data;
+            console.log(this.status, "aqui");
+        },
 
         async deleteUser(id) {
             const req = await fetch(`http://localhost:3000/users/${id}`, {
@@ -57,7 +59,6 @@ export default {
             this.msg = "Seu cadastro foi removido com sucesso!";
             setTimeout(() => this.msg = "", 5000);
             
-            //metodo para forcar a atualizacao do sistema apos o delete
             this.getUsers(); 
         },
 
@@ -67,8 +68,8 @@ export default {
         },
 
         async updateUser(event, id) {
-            const edit = event.target.value;
-            const dataJson = JSON.stringify({users: user});
+            const option = event.target.value;
+            const dataJson = JSON.stringify({status: option});
 
             const req = await fetch(`http://localhost:3000/users/${id}`, {
                 method: "PATCH",
@@ -78,6 +79,8 @@ export default {
 
             const res = await req.json();
             console.log(res);
+
+            this.getUsers();
         }
     },
     
