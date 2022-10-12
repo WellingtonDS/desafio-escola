@@ -60014,45 +60014,5 @@
       }
     ]
   },
-  "users": [
-    {
-      "name": "Wellington Dos Santos",
-      "email": "w_santos1993@outlook.com",
-      "photo": null,
-      "turma": {
-        "label": "Turma 4 A",
-        "id": 4,
-        "serieId": 2,
-        "serieName": "2º ano"
-      },
-      "status": "Ativo",
-      "id": 2
-    },
-    {
-      "name": "Wellington dos Santos",
-      "email": "w_santos1993@outlook.com",
-      "photo": null,
-      "turma": {
-        "label": "Turma 2 A",
-        "id": 2,
-        "serieId": 4,
-        "serieName": "4º ano"
-      },
-      "status": "Ativo",
-      "id": 3
-    },
-    {
-      "name": "Wellington Dos Santos",
-      "email": "w_santos1993@outlook.com",
-      "photo": null,
-      "turma": {
-        "label": "Turma 1 B",
-        "id": 1,
-        "serieId": 2,
-        "serieName": "2º ano"
-      },
-      "status": "Ativo",
-      "id": 4
-    }
-  ]
+  "users": []
 }

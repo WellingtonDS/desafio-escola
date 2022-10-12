@@ -1,10 +1,15 @@
+import { useVuelidate } from '@vuelidate/core'
+import { required, minLength , email } from '@vuelidate/validators'
 import Message from '../message/MessageComponent';
-import { required, minLength } from 'vuelidate/lib/validators'
 
 export default {
     name: "form",
     components: {
         Message
+    },
+
+    setup () {
+        return { v$: useVuelidate() }
     },
 
     data() {
@@ -17,15 +22,17 @@ export default {
             status: "Ativo",
             email: '',
             msg: "",
-            errors: []
+            error: []
         }
     },
 
     validations: {
         name: {
           required,
-          minLength: minLength(4)
-        }
+          minLength: minLength(5),
+        },
+        email: { required, email},
+        turma: {required}
       },
 
     methods: {
@@ -41,36 +48,43 @@ export default {
         },
 
         async createUser(e) {
+
             e.preventDefault();
-            
-            const data = {
-                name: this.name,
-                email: this.email,
-                photo: this.photo,
-                turma: this.turma,
-                status: this.status
+
+            this.v$.$validate();
+            if(!this.v$.$error) {
+                const data = {
+                    name: this.name,
+                    email: this.email,
+                    photo: this.photo,
+                    turma: this.turma,
+                    status: this.status
+                }
+    
+                const dataJson = JSON.stringify(data); //transformando texto em formato json
+    
+                const req = await fetch("Http://localhost:3000/users", {            // metodo para enviar dados via post para arquivo json.
+                    method: "POST", 
+                    headers: {"Content-Type": "application/json"},
+                    body: dataJson
+                });
+
+                const res = await req.json();
+
+                this.msg = `${res.name}, cadastro realizado com sucesso!`;
+
+                this.name = "";
+                this.email = "";
+                this.photo = "";
+                this.turma = "";
+                    
+                
+            } else {
+                
             }
-
-            const dataJson = JSON.stringify(data); //transformando texto em formato json
-
-            const req = await fetch("Http://localhost:3000/users", {            // metodo para enviar dados via post para arquivo json.
-                method: "POST", 
-                headers: {"Content-Type": "application/json"},
-                body: dataJson
-            });
-
-            const res = await req.json();
-
-            this.msg = `${res.name}, cadastro realizado com sucesso!`;
-
-
-            setTimeout(() => this.msg = "", 3000);
-
-            //limpar campos
-            this.name = "";
-            this.email = "";
-            this.photo = "";
-            this.turma = "";
+            
+            
+            setTimeout(() => this.msg = "", 5000);
             
         }    
     },
