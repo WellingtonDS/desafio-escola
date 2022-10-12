@@ -8,11 +8,14 @@
     "backend": "json-server --watch db/db.json"
   },
   "dependencies": {
+    "bootstrap": "^5.2.2",
+    "bootstrap-vue": "^2.22.0",
     "core-js": "^3.8.3",
     "json-server": "^0.17.0",
     "vee-validate": "^4.7.0",
-    "vue": "^3.2.13",
-    "vue-router": "^4.0.3"
+    "vue": "^3.2.40",
+    "vue-router": "^4.0.3",
+    "vuelidate": "^0.7.7"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",

@@ -13,7 +13,7 @@
                     <option value="">Selecione sua turma</option>
                     <option v-for="turma in turmas" :key="turma.id" :value="turma"
                     >
-                        {{ turma }}
+                        {{ turma.id }} &ensp; {{ turma.label }} &ensp; {{ turma.serieId }} &ensp; {{ turma.serieName }}
                     </option>
                 </select>
             </div>

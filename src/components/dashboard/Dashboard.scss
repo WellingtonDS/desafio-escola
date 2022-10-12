@@ -95,3 +95,29 @@
 .btn {
     justify-content: space-between;
 }
+
+
+
+
+#form-groups {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 900px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#form-select {
+    width: 150px;
+    text-align: center;
+}
+
+.form-group {
+    height: 50px;
+}
+
+.form-group label {
+    border: none;
+}

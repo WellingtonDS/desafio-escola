@@ -1,4 +1,5 @@
 import Message from '../message/MessageComponent';
+import { required, minLength } from 'vuelidate/lib/validators'
 
 export default {
     name: "form",
@@ -16,8 +17,17 @@ export default {
             status: "Ativo",
             email: '',
             msg: "",
+            errors: []
         }
     },
+
+    validations: {
+        name: {
+          required,
+          minLength: minLength(4)
+        }
+      },
+
     methods: {
         async getData() {
             let currentDate = new Date(); //variável recebe a data atual 
@@ -62,8 +72,9 @@ export default {
             this.photo = "";
             this.turma = "";
             
-        }
+        }    
     },
+
     mounted() {
         setTimeout(() => {
             this.getData() //atraso no carregamento de requisicao do json em 500ms

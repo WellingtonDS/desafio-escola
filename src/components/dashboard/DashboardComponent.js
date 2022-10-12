@@ -3,7 +3,7 @@ import Message from '../message/MessageComponent';
 export default {
     name: "Dashboard",
     components: {
-        Message
+        Message,
     },
 
     data() {
@@ -11,8 +11,24 @@ export default {
             users: null,
             user_id: null,
             status: [],
-            msg: null
+            msg: null,
+            selected: null,
+            search: ''
         }
+    },
+
+    computed: {
+        // async  filteredUsers() {
+        //     let valor = [];
+        //     valor = this.users.filter((user) => {
+        //         return (
+        //             user.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1 ||
+        //             user.email.toLowerCase().indexOf(this.search.toLowerCase()) > -1
+        //         );
+        //     });
+            
+        //     return valor;
+        // }
     },
 
     methods: {
@@ -43,6 +59,11 @@ export default {
             
             //metodo para forcar a atualizacao do sistema apos o delete
             this.getUsers(); 
+        },
+
+        cleanFilter() {
+            this.selected =  null,
+            this.search = ''
         },
 
         async updateUser(event, id) {

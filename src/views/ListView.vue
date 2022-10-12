@@ -11,6 +11,11 @@ import Dashboard from '../components/dashboard/Dashboard.vue';
 
 export default {
   name: "Lista",
+  data() {
+    return {
+      search: ""
+    }
+  },
   components: {
     Dashboard
   }
