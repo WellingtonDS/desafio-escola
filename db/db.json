@@ -60015,7 +60015,7 @@
         "serieId": 2,
         "serieName": "2º ano"
       },
-      "status": "Ativo",
+      "status": "Inativo",
       "id": 1
     },
     {
@@ -60030,6 +60030,19 @@
       },
       "status": "Ativo",
       "id": 3
+    },
+    {
+      "name": "Wellington Dos Santos",
+      "email": "w_santos1993@outlook.com",
+      "photo": null,
+      "turma": {
+        "label": "Turma 1 B",
+        "id": 1,
+        "serieId": 2,
+        "serieName": "2º ano"
+      },
+      "status": "Ativo",
+      "id": 4
     }
   ],
   "status": [

@@ -27,6 +27,10 @@ export default {
 
 
 //padronizacao de fonts dos elementos.
+#app {
+  background-color: $gin;
+}
+
 * {
   font-family: Helvetica;
   padding: 0;
