@@ -46,7 +46,6 @@ export default {
             const data = await req.json();
 
             this.status = data;
-            console.log(this.status, "aqui");
         },
 
         async deleteUser(id) {
@@ -80,10 +79,8 @@ export default {
             const res = await req.json();
 
 
-            this.msg = `Aluno ${res.name}, teve seu status atualizado para ${res.status}!`;
+            this.msg = `${res.name}, teve seu status atualizado para ${res.status}!`;
             setTimeout(() => this.msg = "", 5000);
-
-            console.log(res);
 
             this.getUsers();
         }

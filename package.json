@@ -8,16 +8,18 @@
     "backend": "json-server --watch db/db.json"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "@vuelidate/core": "^2.0.0",
     "@vuelidate/validators": "^2.0.0",
-    "bootstrap": "^5.2.2",
     "bootstrap-vue": "^2.22.0",
+    "bootstrap-vue-3": "^0.3.12",
     "core-js": "^3.8.3",
     "json-server": "^0.17.0",
     "vee-validate": "^4.7.0",
     "vue": "^3.2.40",
     "vue-router": "^4.0.3",
-    "vuelidate": "^0.7.7"
+    "vuelidate": "^0.7.7",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",

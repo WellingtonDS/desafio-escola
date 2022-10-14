@@ -1,3 +1,4 @@
+//Cores globais
 $persianGreen: #00b1ac;
 $keppel: #36b1ac;
 $summerGreen: #a0bdb3;
@@ -5,7 +6,6 @@ $concrete: #f3f3f3;
 $grey30: #656565;
 $greyScale: #eff6f5;
 $nandor: #4b665c;
-$linearGradien: linear-gradient(180deg, #00b1ac 35.94%, #007d79 100%);
 $oceanBlue: #005b8f;
 $white: #ffffff;
 $downriver: #071d49;
@@ -25,5 +25,39 @@ $goldHovered: #daaa00;
 $goldPressed: #da9d00;
 $marine: #7bafd4;
 $red: #f04f50;
-$blueGradient: linear-gradient(180deg, #005b8f 35.94%, #003a5a 100%);
 $blueOrient: #005b8f;
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #198754;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+//Cores gradientes
+$linearGradien: linear-gradient(180deg, #00b1ac 35.94%, #007d79 100%);
+$gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0));
+$blueGradient: linear-gradient(180deg, $blueOrient 35.94%, #003a5a 100%);
+
+//Cores de ações e interações.
+$primary:       $blue;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-900;

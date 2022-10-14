@@ -1,18 +1,18 @@
 <template>
     <div id="list-table">
-        <Message :msg="msg" v-show="msg"/> 
+        <Message :msg="msg" v-show="msg"/>
         <div id="form-groups">
             <div class="form-group">
               <label for="">Buscar aluno ou turma:</label>
               <input type="text" id="#form-select"
-                class="form-control" placeholder="Nome ou turma" v-model="search" maxlength="75">
+                 placeholder="Nome ou turma" v-model="search" maxlength="75">
             </div>
             <div class="form-group">
               <label for="">Status</label>
-              <select class="form-control" name="Status" v-model="selected" id="form-select">
+              <select name="Status" v-model="selected" id="form-select">
               </select>
             </div>
-            <div class="btn">
+            <div>
                 <button class="clean-btn" @click="cleanFilter()">Limpar filtro</button>
             </div>
         </div>
