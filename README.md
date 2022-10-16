@@ -17,7 +17,7 @@ npm run build
 
 ### Compiles fake backend db
 ```
-npm run backend
+npm run backend || json-server --watch db/db.json
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
